@@ -1,0 +1,8 @@
+:root {
+  --primary: rgb(245, 88, 53);
+  --secondary: rgb(27, 26, 26);
+  --on-color: rgb(255, 255, 255);
+
+  --ff-heading: 'manrope', sans-serif;
+  --ff-body: 'jost', sans-serif;
+}
