@@ -72,7 +72,7 @@
   margin-top: 2rem;
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   #destination-carousel {
     overflow: visible;
   }
@@ -188,7 +188,7 @@
   width: fit-content;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .activity-btns {
     overflow-x: visible;
     scroll-snap-type: none;
@@ -203,13 +203,77 @@
   }
 }
 
-@media (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .activity-btns {
     justify-content: center;
   }
 }
 
 /* testimonials */
+
+/* customer gallery */
+
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'img1 img2'
+      'img1 img2'
+      'img1 img4'
+      'img3 img4'
+      'img3 img4'
+      'img3 img6'
+      'img5 img6'
+      'img5 img6';
+    gap: 1rem;
+  }
+
+  .gallery-grid img:nth-child(1) {
+    grid-area: img1;
+  }
+  .gallery-grid img:nth-child(2) {
+    grid-area: img2;
+  }
+  .gallery-grid img:nth-child(3) {
+    grid-area: img3;
+  }
+  .gallery-grid img:nth-child(4) {
+    grid-area: img4;
+  }
+  .gallery-grid img:nth-child(5) {
+    grid-area: img5;
+  }
+  .gallery-grid img:nth-child(6) {
+    grid-area: img6;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'img1 img2 img3'
+      'img1 img2 img3'
+      'img4 img2 img6'
+      'img4 img2 img6'
+      'img4 img5 img6'
+      'img4 img5 img6';
+    gap: 1rem;
+  }
+}
 
 /* 
 TO DO
