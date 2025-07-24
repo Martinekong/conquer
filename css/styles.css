@@ -202,3 +202,10 @@ footer .logo {
 .text-btn:hover {
   cursor: pointer;
 }
+
+/* 
+TO DO
+- fix nav menu in header for mobile and desktop
+- fix flex/design in footer for desktop 
+- center align all content on xl screens
+*/

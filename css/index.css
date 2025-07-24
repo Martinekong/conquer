@@ -39,7 +39,6 @@
   scrollbar-width: auto;
 }
 
-/* the scrollbar isnt visible on firefox? */
 #destination-carousel::-webkit-scrollbar {
   height: 8px;
 }
@@ -105,18 +104,40 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0 2rem;
+  padding-bottom: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: auto; /* Firefox */
+  margin: 0 2rem;
 }
 
 .activity-btns button {
   border: none;
   background: none;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
 }
 
 .activity-btns span {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   padding: 1rem;
+}
+
+.activity-btns::-webkit-scrollbar {
+  height: 8px;
+}
+
+.activity-btns::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 4px;
+}
+
+.activity-btns::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .active-filter span {
@@ -167,9 +188,30 @@
   width: fit-content;
 }
 
+@media (min-width: 600px) {
+  .activity-btns {
+    overflow-x: visible;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: auto;
+    scrollbar-width: none;
+    gap: 2rem;
+    justify-content: left;
+  }
+
+  .activity-btns::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @media (min-width: 900px) {
   .activity-btns {
     justify-content: center;
-    gap: 2rem;
   }
 }
+
+/* testimonials */
+
+/* 
+TO DO
+- fix padding on activity container on larger screens 
+*/
