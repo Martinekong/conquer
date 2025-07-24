@@ -12,9 +12,17 @@ export function createDestinationCard(element, container) {
   const description = document.createElement('p');
   description.textContent = element.description;
 
-  const btn = document.createElement('button');
+  const btn = document.createElement('a');
   btn.classList.add('text-btn');
   btn.textContent = 'Learn more';
+
+  if (window.location.pathname.includes('index.html')) {
+    btn.href = `./destinations/country.html?id=${encodeURIComponent(
+      element.country
+    )}`;
+  } else if (window.location.pathname.includes('destinations.html')) {
+    btn.href = `./country.html?id=${encodeURIComponent(element.country)}`;
+  }
 
   card.append(image, name, description, btn);
   container.append(card);
@@ -58,7 +66,17 @@ export function createTestimonialCard(element, container) {
 export function createOverlay(content) {
   const overlayBg = document.createElement('div');
   const overlay = document.createElement('div');
-  overlay.append(content);
+
+  const closeOverlay = document.createElement('span');
+  closeOverlay.classList.add('material-symbols-outlined', 'close-overlay');
+  closeOverlay.textContent = 'close';
+
+  closeOverlay.addEventListener('click', () => {
+    overlayBg.remove();
+    overlay.remove();
+  });
+
+  overlay.append(content, closeOverlay);
 
   overlayBg.classList.add('overlay-bg');
   overlay.classList.add('overlay');

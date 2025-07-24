@@ -7,6 +7,7 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/hiking.jpg',
     imageAlt: '',
+    icon: 'hiking',
   },
   {
     name: 'diving',
@@ -16,6 +17,7 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/diving.jpg',
     imageAlt: '',
+    icon: 'scuba_diving',
   },
   {
     name: 'rafting',
@@ -24,6 +26,8 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
+    icon: '',
+    // Missing icon
   },
   {
     name: 'sky-diving',
@@ -33,6 +37,7 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/sky-diving.jpg',
     imageAlt: '',
+    icon: 'paragliding',
   },
   {
     name: 'skiing',
@@ -42,6 +47,7 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/skiing.jpg',
     imageAlt: '',
+    icon: 'downhill_skiing',
   },
   {
     name: 'snorkeling',
@@ -51,6 +57,8 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
+    icon: '',
+    // Missing icon
   },
   {
     name: 'surfing',
@@ -60,6 +68,7 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/surfing.jpg',
     imageAlt: '',
+    icon: 'surfing',
   },
   {
     name: 'kayaking',
@@ -69,6 +78,7 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/kayaking.jpg',
     imageAlt: '',
+    icon: 'kayaking',
   },
   {
     name: 'cycling',
@@ -78,6 +88,7 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
+    icon: 'directions_bike',
   },
   {
     name: 'canooing',
@@ -86,6 +97,8 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
+    icon: '',
+    // Missing icon
   },
   {
     name: 'snowboarding',
@@ -95,6 +108,7 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
+    icon: 'snowboarding',
   },
   {
     name: 'paddle-boarding',
@@ -104,6 +118,8 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
+    icon: '',
+    // Missing icon
   },
   {
     name: 'sailing',
@@ -112,5 +128,6 @@ export const activities = [
     price: 50,
     imageUrl: './../../img/activities/sailing.jpg',
     imageAlt: '',
+    icon: 'sailing',
   },
 ];

@@ -42,6 +42,13 @@ section:not(.hero, .activities) {
 
 /* typography */
 
+h1 {
+  font-family: var(--ff-heading);
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
 h2 {
   font-family: var(--ff-heading);
   text-transform: uppercase;
@@ -233,6 +240,12 @@ footer .logo {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.close-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 /* 

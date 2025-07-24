@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
-    <title>Destinations | Conquer</title>
+    <title>| Conquer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,8 +20,8 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./../css/styles.css" />
-    <link rel="stylesheet" href="./../css/destinations.css" />
-    <script type="module" src="./../js/ui/destinations.js"></script>
+    <link rel="stylesheet" href="./../css/country.css" />
+    <script type="module" src="./../js/ui/country.js"></script>
   </head>
   <body>
     <header>
@@ -39,27 +39,12 @@
     </header>
 
     <main>
-      <section class="destinations">
+      <section class="country">
         <div class="section-heading">
-          <p>Where do you want to go?</p>
-          <h1>destinations</h1>
+          <p>Explore</p>
+          <h1 id="country-heading"></h1>
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur. Venenatis quisque mauris cras
-          purus quam sapien. Integer tincidunt duis sed lectus. A tincidunt
-          tempus interdum elit faucibus sem semper aenean tristique. Nunc purus
-          ac cursus iaculis leo. Lorem ipsum dolor sit amet consectetur.
-          Venenatis quisque mauris cras purus quam sapien. Integer tincidunt
-          duis sed lectus. A tincidunt tempus interdum elit faucibus sem semper
-          aenean tristique. Nunc purus ac cursus iaculis leo.
-        </p>
-        <div class="destination-filter">
-          <button id="filter-btn" class="secondary-btn small">Filter</button>
-          <span class="material-symbols-outlined" id="all-filter-btn">
-            all_inclusive
-          </span>
-        </div>
-        <div id="destinations-grid"></div>
+        <div id="country-container"></div>
       </section>
     </main>
 
