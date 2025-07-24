@@ -1,6 +1,7 @@
 import { createDestinationCard } from './../utils/destinations.js';
 import { destinations } from './../api/destinations.js';
 import { activities } from './../api/activities.js';
+import { testimonials } from './../api/testimonials.js';
 
 function renderHomePage() {
   showPopularDestinations();
@@ -9,6 +10,7 @@ function renderHomePage() {
   );
   showActivity(defaultActivity);
   setupFilterButtons();
+  setupTestimonialCarousel(testimonials);
 }
 
 function showPopularDestinations() {
@@ -54,6 +56,67 @@ function setupFilterButtons() {
       );
       showActivity(activity);
     });
+  });
+}
+
+let currentIndex = 0;
+let testimonialsData = [];
+
+function showSingleTestimonial(index) {
+  const container = document.getElementById('testimonials-container');
+  container.innerHTML = '';
+
+  const el = testimonialsData[index];
+  const testimonialWrapper = document.getElementById('testimonial-wrapper');
+  testimonialWrapper.style.backgroundImage = `url('${el.imageSrc}')`;
+
+  const card = document.createElement('div');
+  card.classList.add('testimonial-card');
+
+  const customerName = document.createElement('h3');
+  customerName.textContent = el.name;
+
+  const starWrapper = document.createElement('div');
+  starWrapper.classList.add('testimonial-stars');
+
+  const fullStars = Math.floor(el.stars);
+  const halfStar = el.stars % 1 !== 0;
+
+  for (let i = 0; i < fullStars; i++) {
+    const star = document.createElement('span');
+    star.classList.add('material-symbols-outlined', 'star');
+    star.textContent = 'star';
+    starWrapper.appendChild(star);
+  }
+
+  if (halfStar) {
+    const half = document.createElement('span');
+    half.classList.add('material-symbols-outlined');
+    half.textContent = 'star_half';
+    starWrapper.appendChild(half);
+  }
+
+  const testimonial = document.createElement('p');
+  testimonial.textContent = `“${el.content}”`;
+  testimonial.classList.add('testimonial-content');
+
+  card.append(customerName, starWrapper, testimonial);
+  container.appendChild(card);
+}
+
+function setupTestimonialCarousel(content) {
+  testimonialsData = content;
+  showSingleTestimonial(currentIndex);
+
+  document.getElementById('prev-testimonial').addEventListener('click', () => {
+    currentIndex =
+      (currentIndex - 1 + testimonialsData.length) % testimonialsData.length;
+    showSingleTestimonial(currentIndex);
+  });
+
+  document.getElementById('next-testimonial').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % testimonialsData.length;
+    showSingleTestimonial(currentIndex);
   });
 }
 

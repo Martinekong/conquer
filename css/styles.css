@@ -58,6 +58,7 @@ h3 {
   font-size: 1.25rem;
   font-weight: 400;
   text-transform: uppercase;
+  font-family: var(--ff-heading);
 }
 
 /* header */
