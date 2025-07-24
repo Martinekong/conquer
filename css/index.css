@@ -158,9 +158,6 @@
 }
 
 #activity-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
   padding: 10rem 2rem;
   color: var(--on-color);
   position: relative;
@@ -180,17 +177,19 @@
   z-index: 1;
 }
 
+.activity-content {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
 .activity-name {
   font-family: var(--ff-heading);
   font-weight: 800;
   font-size: 3rem;
   text-transform: uppercase;
-}
-
-.activity-name,
-#activity-container p,
-#activity-container button {
-  z-index: 2;
 }
 
 #activity-container button {

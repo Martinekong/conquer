@@ -144,6 +144,7 @@ footer .logo {
 
 .newsletter-input {
   position: relative;
+  max-width: 500px;
 }
 
 .plane {
@@ -157,6 +158,47 @@ footer .logo {
 .footer-icons {
   display: flex;
   gap: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  footer .logo {
+    grid-column: span 2;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'logo links news'
+      'logo links icons'
+      'logo links text';
+  }
+
+  footer .logo {
+    grid-area: logo;
+  }
+
+  .footer-links {
+    grid-area: links;
+  }
+
+  .footer-newsletter {
+    grid-area: news;
+  }
+
+  .footer-icons {
+    grid-area: icons;
+  }
+
+  .footer-text {
+    grid-area: text;
+  }
 }
 
 /* buttons */
@@ -248,9 +290,19 @@ footer .logo {
   right: 1rem;
 }
 
+@media screen and (min-width: 1150px) {
+  section:not(.hero, .activities),
+  .activity-content {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .activity-content {
+    padding-left: 2rem;
+  }
+}
+
 /* 
 TO DO
 - fix nav menu in header for mobile and desktop
-- fix flex/design in footer for desktop 
-- center align all content on xl screens
 */

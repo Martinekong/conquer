@@ -52,7 +52,20 @@
   text-transform: unset;
 }
 
-/* 
-TODO
-- Fix media queries for larger screens
-*/
+@media screen and (min-width: 600px) {
+  #country-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  #country-container img,
+  .about-section,
+  .price-container {
+    grid-column: span 2;
+  }
+
+  .activity-section {
+    padding-left: 5rem;
+  }
+}

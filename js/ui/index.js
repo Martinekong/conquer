@@ -35,6 +35,9 @@ function showActivity(activity) {
 
   activityContainer.style.backgroundImage = `url(${activity.imageUrl})`;
 
+  const activityContent = document.createElement('div');
+  activityContent.classList.add('activity-content');
+
   const activityName = document.createElement('p');
   activityName.classList.add('activity-name');
   activityName.textContent = activity.name;
@@ -46,7 +49,8 @@ function showActivity(activity) {
   button.classList.add('secondary-btn', 'large');
   button.textContent = 'book now';
 
-  activityContainer.append(activityName, activityDescription, button);
+  activityContent.append(activityName, activityDescription, button);
+  activityContainer.append(activityContent);
 }
 
 function setupFilterButtons() {
