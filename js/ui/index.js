@@ -1,4 +1,7 @@
-import { createDestinationCard } from './../utils/destinations.js';
+import {
+  createDestinationCard,
+  createTestimonialCard,
+} from './../utils/cards.js';
 import { destinations } from './../api/destinations.js';
 import { activities } from './../api/activities.js';
 import { testimonials } from './../api/testimonials.js';
@@ -18,6 +21,11 @@ function showPopularDestinations() {
 
   destinations.splice(0, 3).forEach((destination) => {
     createDestinationCard(destination, desinationCarousel);
+  });
+
+  const destinationsBtn = document.getElementById('destinations-btn');
+  destinationsBtn.addEventListener('click', () => {
+    window.location.href = './destinations/destinations.html';
   });
 }
 
@@ -70,38 +78,7 @@ function showSingleTestimonial(index) {
   const testimonialWrapper = document.getElementById('testimonial-wrapper');
   testimonialWrapper.style.backgroundImage = `url('${el.imageSrc}')`;
 
-  const card = document.createElement('div');
-  card.classList.add('testimonial-card');
-
-  const customerName = document.createElement('h3');
-  customerName.textContent = el.name;
-
-  const starWrapper = document.createElement('div');
-  starWrapper.classList.add('testimonial-stars');
-
-  const fullStars = Math.floor(el.stars);
-  const halfStar = el.stars % 1 !== 0;
-
-  for (let i = 0; i < fullStars; i++) {
-    const star = document.createElement('span');
-    star.classList.add('material-symbols-outlined', 'star');
-    star.textContent = 'star';
-    starWrapper.appendChild(star);
-  }
-
-  if (halfStar) {
-    const half = document.createElement('span');
-    half.classList.add('material-symbols-outlined');
-    half.textContent = 'star_half';
-    starWrapper.appendChild(half);
-  }
-
-  const testimonial = document.createElement('p');
-  testimonial.textContent = `“${el.content}”`;
-  testimonial.classList.add('testimonial-content');
-
-  card.append(customerName, starWrapper, testimonial);
-  container.appendChild(card);
+  createTestimonialCard(el, container);
 }
 
 function setupTestimonialCarousel(content) {

@@ -28,7 +28,7 @@ export const destinations = [
   },
   {
     country: 'peru',
-    continent: 'south america',
+    continent: 'south-america',
     description:
       'From Machu Picchu to the Amazon, Peru offers ancient ruins, jungle adventures, and diverse landscapes.',
     price: 99,
@@ -69,6 +69,15 @@ export const destinations = [
       'From vast savannas to turquoise coasts, Kenya offers safaris, wildlife, and incredible skydiving views.',
     price: 99,
     imageUrl: './../../img/destinations/kenya.jpg',
+    imageAlt: '',
+  },
+  {
+    country: 'canada',
+    continent: 'north-america',
+    description:
+      'A vast wilderness of towering mountains and pristine lakes. Perfect for hiking, wildlife spotting, and northern adventures.',
+    price: 99,
+    imageUrl: './../../img/destinations/canada.jpg',
     imageAlt: '',
   },
 ];

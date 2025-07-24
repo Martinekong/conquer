@@ -3,7 +3,7 @@ export const activities = [
     name: 'hiking',
     description:
       'Explore breathtaking mountain trails and scenic nature walks.',
-    locations: ['norway', 'nepal', 'peru', 'australia', 'iceland'],
+    locations: ['norway', 'nepal', 'peru', 'australia', 'canada', 'iceland'],
     price: 50,
     imageUrl: './../../img/activities/hiking.jpg',
     imageAlt: '',
@@ -20,7 +20,7 @@ export const activities = [
   {
     name: 'rafting',
     description: 'Challenge the rapids with an exhilarating rafting adventure.',
-    locations: ['vietnam', 'indonesia', 'norway'],
+    locations: ['vietnam', 'indonesia', 'norway', 'nepal', 'canada', 'peru'],
     price: 50,
     imageUrl: '',
     imageAlt: '',
@@ -29,7 +29,7 @@ export const activities = [
     name: 'sky-diving',
     description:
       'Feel the rush of freefalling from the sky in a thrilling skydiving experience.',
-    locations: ['kenya', 'australia'],
+    locations: ['kenya', 'australia', 'canada'],
     price: 50,
     imageUrl: './../../img/activities/sky-diving.jpg',
     imageAlt: '',
@@ -38,7 +38,7 @@ export const activities = [
     name: 'skiing',
     description:
       'Glide down snow-covered slopes in stunning alpine destinations.',
-    locations: ['norway', 'iceland'],
+    locations: ['norway', 'iceland', 'canada'],
     price: 50,
     imageUrl: './../../img/activities/skiing.jpg',
     imageAlt: '',
@@ -56,7 +56,7 @@ export const activities = [
     name: 'surfing',
     description:
       'Ride the waves and enjoy the thrill of surfing along beautiful coastlines.',
-    locations: ['australia'],
+    locations: ['australia', 'indonesia'],
     price: 50,
     imageUrl: './../../img/activities/surfing.jpg',
     imageAlt: '',
@@ -65,7 +65,7 @@ export const activities = [
     name: 'kayaking',
     description:
       'Paddle through serene lakes or wild rivers for an adventurous kayaking experience.',
-    locations: ['norway', 'vietnam'],
+    locations: ['norway', 'vietnam', 'kenya', 'iceland', 'canada'],
     price: 50,
     imageUrl: './../../img/activities/kayaking.jpg',
     imageAlt: '',
@@ -74,7 +74,7 @@ export const activities = [
     name: 'cycling',
     description:
       'Cycle through picturesque landscapes and challenging terrains.',
-    locations: ['australia', 'norway'],
+    locations: ['australia', 'norway', 'Kenya', 'vietnam'],
     price: 50,
     imageUrl: '',
     imageAlt: '',
@@ -82,7 +82,7 @@ export const activities = [
   {
     name: 'canooing',
     description: 'Glide gently along peaceful rivers and lakes in a canoe.',
-    locations: ['vietnam'],
+    locations: ['vietnam', 'canada'],
     price: 50,
     imageUrl: '',
     imageAlt: '',
@@ -91,7 +91,7 @@ export const activities = [
     name: 'snowboarding',
     description:
       'Ride the snowy slopes and enjoy the adrenaline of snowboarding.',
-    locations: ['norway', 'iceland'],
+    locations: ['norway', 'iceland', 'canada'],
     price: 50,
     imageUrl: '',
     imageAlt: '',
@@ -108,7 +108,7 @@ export const activities = [
   {
     name: 'sailing',
     description: 'Navigate the open seas and feel the wind in your sails.',
-    locations: ['australia', 'norway'],
+    locations: ['australia', 'norway', 'indonesia'],
     price: 50,
     imageUrl: './../../img/activities/sailing.jpg',
     imageAlt: '',
