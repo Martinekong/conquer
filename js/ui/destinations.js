@@ -12,9 +12,15 @@ function renderDestinations() {
 
 function showAllDestinations() {
   destinationsGrid.innerHTML = '';
-  destinations.forEach((destination) => {
-    createDestinationCard(destination, destinationsGrid);
-  });
+
+  showSkeletonCards(destinations.length);
+
+  setTimeout(() => {
+    destinationsGrid.innerHTML = '';
+    destinations.forEach((destination) => {
+      createDestinationCard(destination, destinationsGrid);
+    });
+  }, 1000);
 }
 
 function showFilterOverlay() {
@@ -144,19 +150,35 @@ function filterDestinations(button, continentSelect, selectedActivities) {
     destinationsGrid.innerHTML = '';
 
     if (filteredDestinations.length === 0) {
+      destinationsGrid.innerHTML = '';
       const filterError = document.createElement('p');
-      filterError.textContent = 'No matches to your filter';
+      filterError.textContent = 'No destination matches your filter';
       filterError.classList.add('filter-error');
       destinationsGrid.appendChild(filterError);
     } else {
-      filteredDestinations.forEach((dest) => {
-        createDestinationCard(dest, destinationsGrid);
-      });
+      destinationsGrid.innerHTML = '';
+      showSkeletonCards(filteredDestinations.length);
 
-      document.querySelector('.overlay-bg')?.remove();
-      document.querySelector('.overlay')?.remove();
+      setTimeout(() => {
+        destinationsGrid.innerHTML = '';
+        filteredDestinations.forEach((dest) => {
+          createDestinationCard(dest, destinationsGrid);
+        });
+      }, 1000);
     }
+
+    document.querySelector('.overlay-bg')?.remove();
+    document.querySelector('.overlay')?.remove();
   });
+}
+
+function showSkeletonCards(count = 6) {
+  destinationsGrid.innerHTML = '';
+  for (let i = 0; i < count; i++) {
+    const skeleton = document.createElement('div');
+    skeleton.classList.add('skeleton-card');
+    destinationsGrid.appendChild(skeleton);
+  }
 }
 
 renderDestinations();

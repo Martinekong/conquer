@@ -1,0 +1,18 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.faq-container,
+.info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-container span,
+.info-container span {
+  font-weight: 600;
+  text-transform: capitalize;
+}
