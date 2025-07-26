@@ -21,6 +21,7 @@
     ></script>
     <link rel="stylesheet" href="./../css/styles.css" />
     <link rel="stylesheet" href="./../css/about.css" />
+    <script type="module" src="./../js/ui/about.js"></script>
   </head>
   <body>
     <header>
@@ -58,14 +59,18 @@
       </section>
 
       <section class="movie-container">
-        <video autoplay muted loop playsinline class="about-video">
-          <source
-            src="./../assets/video/8230620-hd_1920_1080_30fps.mp4"
-            type="video/mp4"
-            class="about-video"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <div class="video-wrapper">
+          <video id="about-video" class="about-video" playsinline>
+            <source
+              src="./../assets/video/8230620-hd_1920_1080_30fps.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <button id="play-button" class="play-button" aria-label="Play video">
+            <span class="material-symbols-outlined">play_circle</span>
+          </button>
+        </div>
       </section>
 
       <section class="offer-container">
