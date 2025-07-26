@@ -1,0 +1,47 @@
+.booking-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.single-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.booking-details,
+.activities {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.booking-details div,
+.activities div {
+  display: flex;
+  gap: 2rem;
+}
+
+.activities div {
+  text-transform: capitalize;
+}
+
+.primary-btn {
+  width: unset;
+}
+
+@media screen and (min-width: 600px) {
+  .booking-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .price-container {
+    grid-column: span 2;
+  }
+
+  .booking-details {
+    justify-content: space-between;
+  }
+}

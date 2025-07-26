@@ -1,5 +1,6 @@
 import { getFromLocalStorage } from './../utils/storage.js';
 import { destinations } from './../api/destinations.js';
+import { formatDate } from './../utils/calendar.js';
 
 function createBookingCard() {
   const bookings = getFromLocalStorage();
@@ -60,14 +61,6 @@ function createBookingCard() {
     singleBookingCard.append(image, bookingInfo);
     bookingContainer.append(singleBookingCard);
   });
-}
-
-function formatDate(dateStr) {
-  const date = new Date(dateStr);
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0');
-  const year = String(date.getFullYear()).slice(2);
-  return `${day}/${month}/${year}`;
 }
 
 createBookingCard();
