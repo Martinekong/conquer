@@ -6,7 +6,15 @@ import { activities } from './../api/activities.js';
 const destinationsGrid = document.getElementById('destinations-grid');
 
 function renderDestinations() {
-  showAllDestinations();
+  const params = new URLSearchParams(window.location.search);
+  const activityFilter = params.get('activities');
+
+  if (activityFilter) {
+    filterDestinationsByActivity(activityFilter);
+  } else {
+    showAllDestinations();
+  }
+
   showFilterOverlay();
   filterAllDestinations();
 }
@@ -20,6 +28,38 @@ function showAllDestinations() {
     destinationsGrid.innerHTML = '';
     destinations.forEach((destination) => {
       createDestinationCard(destination, destinationsGrid);
+    });
+  }, 1000);
+}
+
+function filterDestinationsByActivity(activityName) {
+  const activity = activities.find((a) => a.name === activityName);
+
+  if (!activity) {
+    showAllDestinations();
+    return;
+  }
+
+  const matchingDestinations = destinations.filter((dest) =>
+    activity.locations.includes(dest.country)
+  );
+
+  destinationsGrid.innerHTML = '';
+
+  if (matchingDestinations.length === 0) {
+    const message = document.createElement('p');
+    message.textContent = 'No destinations found for that activity.';
+    message.classList.add('filter-error');
+    destinationsGrid.appendChild(message);
+    return;
+  }
+
+  showSkeletonCards(matchingDestinations.length);
+
+  setTimeout(() => {
+    destinationsGrid.innerHTML = '';
+    matchingDestinations.forEach((dest) => {
+      createDestinationCard(dest, destinationsGrid);
     });
   }, 1000);
 }
@@ -117,6 +157,9 @@ function filterAllDestinations() {
 
   allFilterBtn.addEventListener('click', () => {
     showAllDestinations();
+
+    history.pushState(null, '', 'destinations.html');
+
     console.log('all destinations shown');
   });
 }
@@ -125,6 +168,14 @@ function filterDestinations(button, continentSelect, selectedActivities) {
   button.addEventListener('click', () => {
     const selectedContinent = continentSelect.value;
     const selectedActivityArray = Array.from(selectedActivities);
+
+    const params = new URLSearchParams();
+    params.set('continent', selectedContinent);
+    if (selectedActivityArray.length > 0) {
+      params.set('activities', selectedActivityArray.join('+'));
+    }
+
+    history.pushState(null, '', `?${params.toString()}`);
 
     let filteredDestinations = destinations;
 
@@ -146,13 +197,11 @@ function filterDestinations(button, continentSelect, selectedActivities) {
     destinationsGrid.innerHTML = '';
 
     if (filteredDestinations.length === 0) {
-      destinationsGrid.innerHTML = '';
       const filterError = document.createElement('p');
       filterError.textContent = 'No destination matches your filter';
       filterError.classList.add('filter-error');
       destinationsGrid.appendChild(filterError);
     } else {
-      destinationsGrid.innerHTML = '';
       showSkeletonCards(filteredDestinations.length);
 
       setTimeout(() => {
@@ -162,9 +211,6 @@ function filterDestinations(button, continentSelect, selectedActivities) {
         });
       }, 1000);
     }
-
-    document.querySelector('.overlay-bg')?.remove();
-    document.querySelector('.overlay')?.remove();
   });
 }
 
