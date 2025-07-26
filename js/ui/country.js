@@ -17,7 +17,7 @@ function renderCountry() {
   const facts = createFunFactSection(countryToRender);
   const activities = createActivitySection(countryToRender);
   const price = createPriceSection(countryToRender);
-  const button = createBookButton();
+  const button = createBookButton(countryToRender);
 
   container.append(image, about, facts, activities, price, button);
 }
@@ -126,9 +126,9 @@ function createPriceSection(country) {
   return section;
 }
 
-function createBookButton() {
+function createBookButton(country) {
   const bookBtn = document.createElement('a');
-  bookBtn.href = './../booking/booking.html';
+  bookBtn.href = `./../booking/booking.html?id=${country.country}`;
   bookBtn.textContent = 'book now';
   bookBtn.classList.add('secondary-btn', 'large');
   return bookBtn;

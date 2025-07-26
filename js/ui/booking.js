@@ -35,6 +35,8 @@ nextMonthBtn.addEventListener('click', () => {
 
 function displayDestinations() {
   const destinationSelect = document.getElementById('destination');
+  const params = new URLSearchParams(window.location.search);
+  const preselectedCountry = params.get('id');
 
   destinations.forEach((destination) => {
     const option = document.createElement('option');
@@ -42,16 +44,22 @@ function displayDestinations() {
     option.textContent =
       destination.country.charAt(0).toUpperCase() +
       destination.country.slice(1);
+
+    if (preselectedCountry && destination.country === preselectedCountry) {
+      option.selected = true;
+      selectedDestination = destination;
+    }
+
     destinationSelect.append(option);
   });
+
+  const calendar = document.getElementById('calendar');
+  calendar.classList.toggle('disabled', !selectedDestination);
 
   destinationSelect.addEventListener('change', (e) => {
     const selected = destinations.find((d) => d.country === e.target.value);
     selectedDestination = selected;
-
-    const calendar = document.getElementById('calendar');
     calendar.classList.toggle('disabled', !selectedDestination);
-
     updateNightCount();
   });
 }
