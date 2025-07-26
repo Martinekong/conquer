@@ -22,20 +22,34 @@
     <link rel="stylesheet" href="./../css/styles.css" />
     <link rel="stylesheet" href="./../css/destinations.css" />
     <script type="module" src="./../js/ui/destinations.js"></script>
+    <script type="module" src="./../js/ui/header.js"></script>
   </head>
   <body>
     <header>
       <a href="./../index.html" class="logo">conquer</a>
-      <nav class="header-nav">
+
+      <nav class="header-nav" id="mobileMenu">
+        <span
+          class="material-symbols-outlined close-btn"
+          id="closeMenu"
+          aria-label="close menu"
+        >
+          close
+        </span>
         <a href="./destinations.html" class="active">destinations</a>
-        <a href="./../content/about.html">about</a>
         <a href="./../booking/booking.html">booking</a>
+        <a href="./../content/about.html">about</a>
         <a href="./../content/contact.html">contact</a>
       </nav>
-      <a href="./../booking/dashboard.html" class="dashboard-btn">
-        <span class="material-symbols-outlined"> calendar_month </span>
-      </a>
-      <span class="material-symbols-outlined menu-btn"> apps </span>
+
+      <div class="header-icon-container">
+        <a href="./../booking/dashboard.html" class="dashboard-btn">
+          <span class="material-symbols-outlined"> calendar_month </span>
+        </a>
+        <span class="material-symbols-outlined menu-btn" id="openMenu"
+          >apps</span
+        >
+      </div>
     </header>
 
     <main>

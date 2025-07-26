@@ -74,7 +74,8 @@ header {
 
 .logo,
 .header-nav a,
-.dashboard-btn {
+.dashboard-btn span,
+.menu-btn {
   padding: 0.5rem;
 }
 
@@ -86,27 +87,80 @@ header {
 }
 
 .header-nav {
-  /* display: flex; */
   display: none;
-  gap: 3rem;
   text-transform: capitalize;
-  font-size: 1.25rem;
   font-weight: 500;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 899px) {
+  .header-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--secondary);
+    color: var(--on-color);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    text-align: center;
+  }
+
+  .header-nav a,
+  .close-btn {
+    padding: 2rem;
+  }
+
+  .header-nav.activeMobile {
+    right: 0;
+  }
+
+  .header-nav .close-btn {
+    align-self: flex-end;
+    font-size: 2rem;
+    color: var(--on-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.header-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .dashboard-btn {
-  /* display: flex; */
-  display: none;
+  display: flex;
   align-content: center;
+}
+
+@media screen and (min-width: 900px) {
+  .header-nav {
+    display: flex;
+    gap: 3rem;
+  }
+
+  .dashboard-btn {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .close-btn {
+    display: none;
+  }
 }
 
 .active {
   border-bottom: 3px solid var(--primary);
 }
-
-/* .menu-btn {
-  display: none;
-} */
 
 /* footer */
 
@@ -342,8 +396,3 @@ footer .logo {
     background-position: 200% 0;
   }
 }
-
-/* 
-TO DO
-- fix nav menu in header for mobile and desktop
-*/
