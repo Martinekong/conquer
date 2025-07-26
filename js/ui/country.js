@@ -127,7 +127,8 @@ function createPriceSection(country) {
 }
 
 function createBookButton() {
-  const bookBtn = document.createElement('button');
+  const bookBtn = document.createElement('a');
+  bookBtn.href = './../booking/booking.html';
   bookBtn.textContent = 'book now';
   bookBtn.classList.add('secondary-btn', 'large');
   return bookBtn;

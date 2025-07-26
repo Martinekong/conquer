@@ -45,7 +45,8 @@ function showActivity(activity) {
   const activityDescription = document.createElement('p');
   activityDescription.textContent = activity.description;
 
-  const button = document.createElement('button');
+  const button = document.createElement('a');
+  button.href = './booking/booking.html';
   button.classList.add('secondary-btn', 'large');
   button.textContent = 'book now';
 
