@@ -210,6 +210,9 @@ footer .logo {
   border: none;
   border-radius: 2px;
   width: 250px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .secondary-btn {
@@ -223,6 +226,7 @@ footer .logo {
   border: none;
   border-radius: 2px;
   min-width: 240px;
+  text-align: center;
 }
 
 .large {
@@ -278,16 +282,34 @@ footer .logo {
   z-index: 5;
 }
 
-.overlay div:first-child {
+.close-overlay-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.overlay-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.close-overlay {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
+.content-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-container button,
+.btn-container a {
+  width: 100%;
 }
 
 @media screen and (min-width: 1150px) {

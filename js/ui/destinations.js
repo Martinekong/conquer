@@ -1,4 +1,5 @@
-import { createDestinationCard, createOverlay } from './../utils/cards.js';
+import { createDestinationCard } from './../utils/cards.js';
+import { createOverlay } from './../utils/overlays.js';
 import { destinations } from './../api/destinations.js';
 import { activities } from './../api/activities.js';
 
@@ -25,10 +26,10 @@ function showAllDestinations() {
 
 function showFilterOverlay() {
   const filterBtn = document.getElementById('filter-btn');
-  filterBtn.addEventListener('click', createFilterOverlay);
+  filterBtn.addEventListener('click', createFilterOptions);
 }
 
-function createFilterOverlay() {
+function createFilterOptions() {
   const filterOptions = document.createElement('div');
 
   const filterHeading = document.createElement('h2');
@@ -106,14 +107,9 @@ function createFilterOverlay() {
   applyBtn.classList.add('secondary-btn', 'small');
   filterDestinations(applyBtn, continentSelect, selectedActivities);
 
-  filterOptions.append(
-    filterHeading,
-    continentSection,
-    activitySection,
-    applyBtn
-  );
+  filterOptions.append(filterHeading, continentSection, activitySection);
 
-  createOverlay(filterOptions);
+  createOverlay(filterOptions, applyBtn);
 }
 
 function filterAllDestinations() {

@@ -62,29 +62,3 @@ export function createTestimonialCard(element, container) {
   card.append(customerName, starWrapper, testimonial);
   container.appendChild(card);
 }
-
-export function createOverlay(content) {
-  const overlayBg = document.createElement('div');
-  const overlay = document.createElement('div');
-
-  const closeOverlay = document.createElement('span');
-  closeOverlay.classList.add('material-symbols-outlined', 'close-overlay');
-  closeOverlay.textContent = 'close';
-
-  closeOverlay.addEventListener('click', () => {
-    overlayBg.remove();
-    overlay.remove();
-  });
-
-  overlay.append(content, closeOverlay);
-
-  overlayBg.classList.add('overlay-bg');
-  overlay.classList.add('overlay');
-
-  document.body.append(overlayBg, overlay);
-
-  overlayBg.addEventListener('click', () => {
-    overlayBg.remove();
-    overlay.remove();
-  });
-}

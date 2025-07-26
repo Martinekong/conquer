@@ -1,14 +1,15 @@
-export function saveToLocalStorage() {
-  // Has to take in an object containing: firstName, lastName, email, number of travellers, dates, activities, total cost
-  // Give the booking an id?
+export function saveToLocalStorage(booking) {
+  const bookings = getFromLocalStorage();
+  bookings.push(booking);
+  localStorage.setItem('bookings', JSON.stringify(bookings));
 }
 
 export function getFromLocalStorage() {
-  // Has to get the object/array of objects containing all bookings
+  const data = localStorage.getItem('bookings');
+  return data ? JSON.parse(data) : [];
 }
 
-export function deleteFromLocalStorage() {
-  // Has to delete the single booking object from localStorage
+export function deleteFromLocalStorage(id) {
+  const bookings = getFromLocalStorage().filter((b) => b.id !== id);
+  localStorage.setItem('bookings', JSON.stringify(bookings));
 }
-
-// Create a function that generates id´s for bookings that are saved in localStorage?
