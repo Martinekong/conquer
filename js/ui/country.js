@@ -29,8 +29,8 @@ function renderCountry() {
 
 function createImage(country) {
   const image = document.createElement('img');
-  image.src = country.imageUrl;
-  image.alt = country.imageAlt;
+  image.src = `./../img/destinations/${country.imageUrl}`;
+  image.alt = `${country.imageAlt}`;
   return image;
 }
 

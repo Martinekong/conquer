@@ -7,7 +7,7 @@ export const destinations = [
     content:
       'Norway is a breathtaking country known for its rugged coastline, deep fjords, and towering mountain ranges. Travelers can embark on epic hikes through national parks, cruise through the UNESCO-listed Geirangerfjord, or witness the magical northern lights dancing across the Arctic sky. The country’s clean cities, such as Oslo and Bergen, blend modern Scandinavian culture with rich Viking history. Norway is also a haven for winter sports enthusiasts, offering world-class skiing and snowboarding in the winter months.',
     price: 99,
-    imageUrl: './../../img/destinations/norway.jpg',
+    imageUrl: 'norway.jpg',
     imageAlt:
       'A person stading on a mountain looking over a fjord with blue waters',
     funFacts: [
