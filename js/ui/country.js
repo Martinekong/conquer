@@ -30,7 +30,7 @@ function renderCountry() {
 function createImage(country) {
   const image = document.createElement('img');
   image.src = `./../img/destinations/${country.imageUrl}`;
-  image.alt = `${country.imageAlt}`;
+  image.alt = country.imageAlt;
   return image;
 }
 
