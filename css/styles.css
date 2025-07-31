@@ -94,6 +94,25 @@ header {
   font-size: 1.25rem;
 }
 
+.header-icon-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-btn {
+  display: flex;
+  align-content: center;
+}
+
+.menu-btn {
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 3px solid var(--primary);
+}
+
 @media screen and (max-width: 899px) {
   .header-nav {
     position: fixed;
@@ -129,17 +148,6 @@ header {
   }
 }
 
-.header-icon-container {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.dashboard-btn {
-  display: flex;
-  align-content: center;
-}
-
 @media screen and (min-width: 900px) {
   .header-nav {
     display: flex;
@@ -157,10 +165,6 @@ header {
   .close-btn {
     display: none;
   }
-}
-
-.active {
-  border-bottom: 3px solid var(--primary);
 }
 
 /* footer */
