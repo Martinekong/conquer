@@ -8,7 +8,8 @@ export const destinations = [
       'Norway is a breathtaking country known for its rugged coastline, deep fjords, and towering mountain ranges. Travelers can embark on epic hikes through national parks, cruise through the UNESCO-listed Geirangerfjord, or witness the magical northern lights dancing across the Arctic sky. The country’s clean cities, such as Oslo and Bergen, blend modern Scandinavian culture with rich Viking history. Norway is also a haven for winter sports enthusiasts, offering world-class skiing and snowboarding in the winter months.',
     price: 99,
     imageUrl: './../../img/destinations/norway.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A person stading on a mountain looking over a fjord with blue waters',
     funFacts: [
       'Norway has more than 1,000 fjords along its coastline.',
       'The sun doesn’t set for weeks during summer in the north.',
@@ -26,7 +27,7 @@ export const destinations = [
       'Nepal is a landlocked gem nestled between China and India, famed for housing eight of the world’s ten highest peaks, including Mount Everest. It’s a paradise for trekkers, with routes like the Annapurna Circuit and Everest Base Camp trek drawing adventurers from around the globe. Beyond its majestic mountains, Nepal captivates with vibrant cultural festivals, sacred temples, and the warmth of its people. Kathmandu’s bustling streets and ancient architecture offer a deep dive into history, while quiet hill towns provide serene escapes.',
     price: 99,
     imageUrl: './../../img/destinations/nepal.jpg',
-    imageAlt: '',
+    imageAlt: 'A group of people walking over a bridge',
     funFacts: [
       'Nepal is home to 8 of the world’s 10 tallest mountains.',
       'The only flag in the world that isn’t rectangular is Nepal’s.',
@@ -44,7 +45,8 @@ export const destinations = [
       'Indonesia is a vast archipelago of over 17,000 islands, offering travelers an extraordinary range of experiences. Bali enchants with its temples, beaches, and surf culture, while Java hosts the sprawling capital of Jakarta and the ancient temples of Borobudur. Adventurers can dive into the vibrant marine life around Raja Ampat, trek active volcanoes in Sumatra, or explore the lush jungles of Borneo. With its mix of cultures, cuisines, and breathtaking natural landscapes, Indonesia is as diverse as it is beautiful.',
     price: 99,
     imageUrl: './../../img/destinations/indonesia.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A woman standing on top of an island looking out over the mountains and beaches',
     funFacts: [
       'Indonesia has over 17,000 islands.',
       'It’s the world’s largest island country and the 4th most populous nation.',
@@ -62,7 +64,8 @@ export const destinations = [
       'Peru is a country steeped in mystery, history, and adventure. Best known for Machu Picchu, the awe-inspiring ancient Inca citadel, it also boasts the Andes mountains, Amazon rainforest, and Pacific coastline. Visitors can explore colonial cities like Cusco and Arequipa, sandboard in the desert oasis of Huacachina, or take a boat tour of Lake Titicaca’s floating islands. Peru’s culinary scene is among the best in South America, with world-renowned dishes like ceviche and lomo saltado.',
     price: 99,
     imageUrl: './../../img/destinations/peru.jpg',
-    imageAlt: '',
+    imageAlt:
+      'People standing on top of a red, white and orange sandy mountain',
     funFacts: [
       'Machu Picchu remained hidden from the outside world until 1911.',
       'The potato originated in Peru—there are over 3,000 varieties!',
@@ -80,7 +83,8 @@ export const destinations = [
       'Vietnam is a land of contrasts, where bustling cities meet serene landscapes. Hanoi and Ho Chi Minh City pulse with energy and history, while destinations like Ha Long Bay, with its limestone karsts, and Ninh Binh’s river caves offer natural tranquility. Rich in tradition and resilience, Vietnam showcases a blend of French colonial architecture, ancient temples, and war history. The local cuisine—pho, banh mi, fresh herbs, and vibrant flavors—is a major highlight of any visit.',
     price: 99,
     imageUrl: './../../img/destinations/vietnam.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A group of people paddeling on a river with forestfilled mountains on each side',
     funFacts: [
       "Vietnam is shaped like the letter 'S'.",
       'Motorbikes are the main form of transportation—there are over 45 million!',
@@ -98,7 +102,7 @@ export const destinations = [
       'Australia is a massive continent-country known for its diverse geography and laid-back lifestyle. From the cosmopolitan cities of Sydney and Melbourne to the remote wilderness of the Outback, the country offers a little something for everyone. Iconic natural wonders like the Great Barrier Reef, Uluru, and the Blue Mountains attract outdoor lovers. Surfing, diving, and wildlife spotting—kangaroos, koalas, and more—are just a few of the adventures you’ll find in this sun-soaked land.',
     price: 99,
     imageUrl: './../../img/destinations/australia.jpg',
-    imageAlt: '',
+    imageAlt: 'A man standing on a mountain overlooking a city and the ocean',
     funFacts: [
       'Australia is home to more kangaroos than people.',
       'The Great Barrier Reef is the largest coral reef system on Earth.',
@@ -116,7 +120,7 @@ export const destinations = [
       'Iceland is a striking land shaped by volcanic activity and glacial forces. Known for its otherworldly landscapes, visitors can bathe in the Blue Lagoon, hike near active volcanoes, or explore ice caves and lava fields. The Golden Circle route leads to geysers, waterfalls, and the tectonic rift at Thingvellir. With its small, charming capital Reykjavik and strong emphasis on sustainability, Iceland is a dream for eco-conscious adventurers and photographers alike.',
     price: 99,
     imageUrl: './../../img/destinations/iceland.jpg',
-    imageAlt: '',
+    imageAlt: 'A person standing by a huge waterfall with crystal blue water',
     funFacts: [
       'Iceland has no mosquitoes.',
       'Over 85% of Iceland’s energy comes from renewable sources.',
@@ -134,7 +138,7 @@ export const destinations = [
       'Kenya is a jewel of East Africa, renowned for its expansive savannas and abundant wildlife. The Masai Mara offers one of the best safari experiences on the planet, where lions, elephants, and wildebeest roam freely. Kenya’s highlands and Great Rift Valley offer dramatic scenery, while its coastlines along the Indian Ocean—like Diani Beach—are perfect for relaxing and water sports. Rich cultural traditions, vibrant cities like Nairobi, and adventure activities like skydiving over the savanna make Kenya a thrilling destination.',
     price: 99,
     imageUrl: './../../img/destinations/kenya.jpg',
-    imageAlt: '',
+    imageAlt: 'A safari jeep in tall grass, with people looking at the sunset',
     funFacts: [
       'The Great Rift Valley runs through Kenya, visible from space.',
       'Kenya is the birthplace of modern safari tourism.',
@@ -152,7 +156,8 @@ export const destinations = [
       'Canada is a vast country of stunning natural beauty, stretching from the Pacific to the Atlantic. Its landscapes range from the majestic Rocky Mountains to the wild tundra of the Yukon. National parks like Banff and Jasper attract hikers, climbers, and skiers, while the cities of Vancouver, Toronto, and Montreal offer urban charm and cultural diversity. Canada’s lakes, forests, and wildlife—including bears, moose, and whales—create a paradise for nature lovers and photographers alike.',
     price: 99,
     imageUrl: './../../img/destinations/canada.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A man hiking on a path through the forest, with a large backpack',
     funFacts: [
       'Canada has the world’s longest coastline.',
       'More than half of Canada is covered in forests.',

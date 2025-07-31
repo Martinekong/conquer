@@ -6,7 +6,7 @@ export const activities = [
     locations: ['norway', 'nepal', 'peru', 'australia', 'canada', 'iceland'],
     price: 50,
     imageUrl: './../../img/activities/hiking.jpg',
-    imageAlt: '',
+    imageAlt: 'Man standing on top of a mountain looking out over the valley',
     icon: 'hiking',
   },
   {
@@ -16,7 +16,8 @@ export const activities = [
     locations: ['norway', 'australia', 'indonesia'],
     price: 50,
     imageUrl: './../../img/activities/diving.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A diver underwater taking a picture of a turtle with his gopro camera',
     icon: 'scuba_diving',
   },
   {
@@ -26,8 +27,7 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
-    icon: '',
-    // Missing icon
+    icon: 'water',
   },
   {
     name: 'sky-diving',
@@ -36,7 +36,7 @@ export const activities = [
     locations: ['kenya', 'australia', 'canada'],
     price: 50,
     imageUrl: './../../img/activities/sky-diving.jpg',
-    imageAlt: '',
+    imageAlt: 'A man in the middle of a skydiving jump floating in the air',
     icon: 'paragliding',
   },
   {
@@ -46,7 +46,8 @@ export const activities = [
     locations: ['norway', 'iceland', 'canada'],
     price: 50,
     imageUrl: './../../img/activities/skiing.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A man skiing down a snow filled mountain with the ocean in the background',
     icon: 'downhill_skiing',
   },
   {
@@ -57,8 +58,7 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
-    icon: '',
-    // Missing icon
+    icon: 'head_mounted_device',
   },
   {
     name: 'surfing',
@@ -67,7 +67,7 @@ export const activities = [
     locations: ['australia', 'indonesia'],
     price: 50,
     imageUrl: './../../img/activities/surfing.jpg',
-    imageAlt: '',
+    imageAlt: 'A man surfing a big wave that is about to break',
     icon: 'surfing',
   },
   {
@@ -77,7 +77,8 @@ export const activities = [
     locations: ['norway', 'vietnam', 'kenya', 'iceland', 'canada'],
     price: 50,
     imageUrl: './../../img/activities/kayaking.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A woman kayaking in crystal blue waters in front of large mountains',
     icon: 'kayaking',
   },
   {
@@ -97,8 +98,7 @@ export const activities = [
     price: 50,
     imageUrl: '',
     imageAlt: '',
-    icon: '',
-    // Missing icon
+    icon: 'rowing',
   },
   {
     name: 'snowboarding',
@@ -111,15 +111,13 @@ export const activities = [
     icon: 'snowboarding',
   },
   {
-    name: 'paddle-boarding',
-    description:
-      'Stand tall on a paddleboard and glide across tranquil waters.',
+    name: 'kitesurfing',
+    description: 'Stand tall on a board and glide across tranquil waters.',
     locations: ['australia', 'indonesia'],
     price: 50,
     imageUrl: '',
     imageAlt: '',
-    icon: '',
-    // Missing icon
+    icon: 'kitesurfing',
   },
   {
     name: 'sailing',
@@ -127,7 +125,8 @@ export const activities = [
     locations: ['australia', 'norway', 'indonesia'],
     price: 50,
     imageUrl: './../../img/activities/sailing.jpg',
-    imageAlt: '',
+    imageAlt:
+      'A man hanging off to the side of a sailboat, holding on to a rope',
     icon: 'sailing',
   },
 ];

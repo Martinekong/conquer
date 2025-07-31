@@ -47,7 +47,7 @@ function showActivity(activity) {
 
   const button = document.createElement('a');
   button.href = `./destinations/destinations.html?activities=${activity.name}`;
-  button.classList.add('secondary-btn', 'small');
+  button.classList.add('primary-btn', 'small');
   button.textContent = 'show destinations';
 
   activityContent.append(activityName, activityDescription, button);

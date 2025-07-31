@@ -1,5 +1,5 @@
 export function createDestinationCard(element, container) {
-  const card = document.createElement('div');
+  const card = document.createElement('a');
   card.classList.add('destination-card');
 
   const image = document.createElement('img');
@@ -12,16 +12,16 @@ export function createDestinationCard(element, container) {
   const description = document.createElement('p');
   description.textContent = element.description;
 
-  const btn = document.createElement('a');
+  const btn = document.createElement('span');
   btn.classList.add('text-btn');
   btn.textContent = 'Learn more';
 
   if (window.location.pathname.includes('index.html')) {
-    btn.href = `./destinations/country.html?id=${encodeURIComponent(
+    card.href = `./destinations/country.html?id=${encodeURIComponent(
       element.country
     )}`;
   } else if (window.location.pathname.includes('destinations.html')) {
-    btn.href = `./country.html?id=${encodeURIComponent(element.country)}`;
+    card.href = `./country.html?id=${encodeURIComponent(element.country)}`;
   }
 
   card.append(image, name, description, btn);

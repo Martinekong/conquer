@@ -46,7 +46,11 @@ function showBookingDetails() {
   }
 
   const nights = document.getElementById('nights');
-  nights.textContent = booking.numberOfNights;
+  if (booking.numberOfNights > 1) {
+    nights.textContent = `${booking.numberOfNights} nights`;
+  } else {
+    nights.textContent = `${booking.numberOfNights} night`;
+  }
 
   const dates = document.getElementById('dates');
   dates.textContent = `${formatDate(booking.startDate)} - ${formatDate(

@@ -18,16 +18,28 @@
   display: flex;
   flex-direction: column-reverse;
   text-transform: uppercase;
-  margin-bottom: 12rem;
+  margin-bottom: 4rem;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .hero h1 {
   font-size: clamp(3rem, 10vw, 7rem);
   font-family: var(--ff-heading);
+}
+
+.hero-btn {
+  width: 250px;
+  display: block;
+  margin: 0 auto 12rem;
+}
+
+@media screen and (min-width: 900px) {
+  .hero p {
+    font-size: 1.5rem;
+  }
 }
 
 /* popular destinations */
@@ -62,6 +74,23 @@
   flex-direction: column;
   gap: 1rem;
   background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.destination-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.destination-card:hover::after {
+  width: 100%;
 }
 
 .destination-card img {
@@ -187,10 +216,6 @@
   font-weight: 800;
   font-size: 3rem;
   text-transform: uppercase;
-}
-
-#activity-container a {
-  width: fit-content;
 }
 
 @media screen and (min-width: 600px) {
@@ -358,8 +383,3 @@
     gap: 1rem;
   }
 }
-
-/* 
-TO DO
-- fix padding on activity container on larger screens 
-*/

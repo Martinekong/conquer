@@ -42,24 +42,25 @@ section:not(.hero, .activities) {
 
 /* typography */
 
-h1 {
+h1,
+h2,
+h3 {
   font-family: var(--ff-heading);
-  font-weight: bold;
-  font-size: 2.5rem;
   text-transform: uppercase;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 h2 {
-  font-family: var(--ff-heading);
-  text-transform: uppercase;
   font-size: 1.875rem;
 }
 
 h3 {
   font-size: 1.25rem;
   font-weight: 400;
-  text-transform: uppercase;
-  font-family: var(--ff-heading);
 }
 
 /* header */
@@ -257,30 +258,34 @@ footer .logo {
 
 /* buttons */
 
-.primary-btn {
-  background-color: var(--primary);
+.primary-btn,
+.secondary-btn {
   color: var(--on-color);
   padding: 1rem;
   border: none;
   border-radius: 2px;
-  width: 250px;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+}
+
+.primary-btn {
+  background-color: var(--primary);
+  width: 250px;
 }
 
 .secondary-btn {
   background-color: var(--secondary);
-  color: var(--on-color);
-  padding: 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 1rem;
-  border: none;
-  border-radius: 2px;
   min-width: 240px;
-  text-align: center;
 }
 
 .large {
