@@ -3,8 +3,17 @@ export function createDestinationCard(element, container) {
   card.classList.add('destination-card');
 
   const image = document.createElement('img');
-  image.src = element.imageUrl;
   image.alt = element.imageAlt;
+
+  if (window.location.pathname.includes('index.html')) {
+    card.href = `./destinations/country.html?id=${encodeURIComponent(
+      element.country
+    )}`;
+    image.src = `./img/destinations/${element.imageUrl}`;
+  } else if (window.location.pathname.includes('destinations.html')) {
+    card.href = `./country.html?id=${encodeURIComponent(element.country)}`;
+    image.src = `./../img/destinations/${element.imageUrl}`;
+  }
 
   const name = document.createElement('h3');
   name.textContent = element.country;
@@ -15,14 +24,6 @@ export function createDestinationCard(element, container) {
   const btn = document.createElement('span');
   btn.classList.add('text-btn');
   btn.textContent = 'Learn more';
-
-  if (window.location.pathname.includes('index.html')) {
-    card.href = `./destinations/country.html?id=${encodeURIComponent(
-      element.country
-    )}`;
-  } else if (window.location.pathname.includes('destinations.html')) {
-    card.href = `./country.html?id=${encodeURIComponent(element.country)}`;
-  }
 
   card.append(image, name, description, btn);
   container.append(card);

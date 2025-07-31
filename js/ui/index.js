@@ -33,7 +33,7 @@ function showActivity(activity) {
   const activityContainer = document.getElementById('activity-container');
   activityContainer.innerHTML = '';
 
-  activityContainer.style.backgroundImage = `url(${activity.imageUrl})`;
+  activityContainer.style.backgroundImage = `url(./img/activities/${activity.imageUrl})`;
 
   const activityContent = document.createElement('div');
   activityContent.classList.add('activity-content');
@@ -81,7 +81,7 @@ function showSingleTestimonial(index) {
 
   const el = testimonialsData[index];
   const testimonialWrapper = document.getElementById('testimonial-wrapper');
-  testimonialWrapper.style.backgroundImage = `url('${el.imageSrc}')`;
+  testimonialWrapper.style.backgroundImage = `url('./img/testimonials/${el.imageSrc}')`;
 
   createTestimonialCard(el, container);
 }

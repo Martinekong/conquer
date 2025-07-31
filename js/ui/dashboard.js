@@ -25,10 +25,9 @@ function createBookingCard() {
       (d) => d.country === booking.destination
     );
 
-    console.log(destinationData);
     const image = document.createElement('img');
     image.classList.add('booking-img');
-    image.src = destinationData.imageUrl;
+    image.src = `./../img/destinations/${destinationData.imageUrl}`;
     image.alt = destinationData.imageAlt;
 
     const bookingInfo = document.createElement('div');

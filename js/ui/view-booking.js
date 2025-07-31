@@ -26,7 +26,7 @@ function renderBooking() {
   heading.textContent = booking.destination;
 
   const image = document.getElementById('destination-img');
-  image.src = destinationData.imageUrl;
+  image.src = `./../img/destinations/${destinationData.imageUrl}`;
   image.alt = destinationData.imageAlt;
 
   showBookingDetails();
