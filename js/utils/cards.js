@@ -5,14 +5,14 @@ export function createDestinationCard(element, container) {
   const image = document.createElement('img');
   image.alt = element.imageAlt;
 
-  if (window.location.pathname.includes('index.html')) {
+  if (window.location.pathname.includes('destinations.html')) {
+    card.href = `./country.html?id=${encodeURIComponent(element.country)}`;
+    image.src = `./../img/destinations/${element.imageUrl}`;
+  } else {
     card.href = `./destinations/country.html?id=${encodeURIComponent(
       element.country
     )}`;
     image.src = `./img/destinations/${element.imageUrl}`;
-  } else if (window.location.pathname.includes('destinations.html')) {
-    card.href = `./country.html?id=${encodeURIComponent(element.country)}`;
-    image.src = `./../img/destinations/${element.imageUrl}`;
   }
 
   const name = document.createElement('h3');
