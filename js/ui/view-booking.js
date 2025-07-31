@@ -10,8 +10,12 @@ const params = new URLSearchParams(window.location.search);
 const bookingId = params.get('id');
 
 const booking = getFromLocalStorage().find((b) => b.id === bookingId);
+const country = booking.destination;
 
-console.log(booking);
+if (country) {
+  const formattedCountry = country.charAt(0).toUpperCase() + country.slice(1);
+  document.title = `${formattedCountry} booking | Conquer`;
+}
 
 const destinationData = destinations.find(
   (d) => d.country === booking.destination

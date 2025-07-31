@@ -375,18 +375,6 @@ footer .logo {
   width: 100%;
 }
 
-@media screen and (min-width: 1150px) {
-  section:not(.hero, .activities),
-  .activity-content {
-    max-width: 1150px;
-    margin: 0 auto;
-  }
-
-  .activity-content {
-    padding-left: 2rem;
-  }
-}
-
 /* Loading card */
 .skeleton-card {
   height: 540px;
@@ -403,5 +391,28 @@ footer .logo {
   }
   100% {
     background-position: 200% 0;
+  }
+}
+
+/* Media queries */
+
+@media screen and (min-width: 1150px) {
+  section:not(.hero, .activities),
+  .activity-content {
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+
+  .activity-content {
+    padding-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .hero,
+  .activities,
+  header {
+    width: 2000px;
+    margin: 0 auto;
   }
 }

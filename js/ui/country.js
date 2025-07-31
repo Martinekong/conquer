@@ -4,6 +4,11 @@ import { activities } from './../api/activities.js';
 const params = new URLSearchParams(window.location.search);
 const country = params.get('id');
 
+if (country) {
+  const formattedCountry = country.charAt(0).toUpperCase() + country.slice(1);
+  document.title = `${formattedCountry} | Conquer`;
+}
+
 function renderCountry() {
   const countryToRender = destinations.find(
     (destination) => destination.country === country
